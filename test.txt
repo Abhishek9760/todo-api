@@ -1,0 +1,12 @@
+{
+        "timestamp": "2023-05-30T12:32:09.663208Z",
+        "title": "Drink Soda2",
+        "description": "Drink water from bottle",
+        "due_date": "2023-05-31",
+        "tags": [
+            {
+                "name": "hobby"
+            }
+        ],
+        "status": "OPEN"
+    }
