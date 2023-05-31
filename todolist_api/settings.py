@@ -26,9 +26,10 @@ SECRET_KEY = "django-insecure-=1=kpw2bci+83rf+i@3s8tz-yr72&#qc5%-)kx#ep3m4nf4uhw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
+# setting the timezone
 TIME_ZONE = 'Asia/Kolkata'
 
 USE_TZ = True
@@ -94,7 +95,6 @@ DATABASES = {
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
     ]
 }
 
@@ -133,6 +133,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "static/"
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static_myproj",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
