@@ -104,11 +104,25 @@ A Todo REST api written in Django Rest Framework
 
 3- POST - Create a new todo - HTTP Response Code: **201**
 ```javascript
+    Example request
+
     Content-Type: application/json
     URL: /api/todos/
 
+    {
+        "title": "New Todo",
+        "description": "New Todo description",
+        "due_date": "2023-07-31",
+        "tags": [
+            {
+                "name": "latest"
+            }
+        ],
+        "status": "OPEN"
+    }
+
 ```
-4- PUT - Update an item - HTTP Response Code: **200/204** 
+4- PUT - Update an item - HTTP Response Code: **200** 
 
 `URL - /api/todos/<id>/`
 ```javascript
